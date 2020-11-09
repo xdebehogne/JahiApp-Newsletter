@@ -7,7 +7,7 @@
 
                                     http://www.jahia.com
 
-        Copyright (C) 2002-2017 Jahia Solutions Group SA. All rights reserved.
+        Copyright (C) 2002-2020 Jahia Solutions Group SA. All rights reserved.
 
         THIS FILE IS AVAILABLE UNDER TWO DIFFERENT LICENSES:
         1/GPL OR 2/JSEL
@@ -49,12 +49,11 @@
   <parent>
     <groupId>org.jahia.modules</groupId>
     <artifactId>jahia-modules</artifactId>
-    <version>7.1.0.0</version>
+    <version>8.0.0.0</version>
     <relativePath />
   </parent>
-  <groupId>org.jahia.modules</groupId>
   <artifactId>newsletter</artifactId>
-  <version>3.1.3-SNAPSHOT</version>
+  <version>4.0.0-SNAPSHOT</version>
   <packaging>bundle</packaging>
   <name>Jahia Newsletter</name>
   <description>Jahia template module that enables newsletter subscription management features.</description>
@@ -65,10 +64,11 @@
     <tag>HEAD</tag>
   </scm>
     <properties>
-    	<!-- Sub-package export to be available for other modules : Make it possible to register newsletter from other module actions as before in 6.6 -->
-        <export-package>org.jahia.modules.newsletter,org.jahia.modules.newsletter.service,org.jahia.modules.newsletter.service.model</export-package>
         <jahia-module-type>jahiapp</jahia-module-type>
+        <require-capability>osgi.extender;filter:="(osgi.extender=org.jahia.bundles.blueprint.extender.config)"</require-capability>
+        <export-package>org.jahia.modules.newsletter,org.jahia.modules.newsletter.service,org.jahia.modules.newsletter.service.model</export-package>
         <jahia-depends>default,siteSettings,tasks,grid</jahia-depends>
+        <jahia-module-signature>MCwCFFuXVMJZOV0oRetdstLqJo7xlBLdAhQ1IF8+dpZw2zJejWF/oErHNXfawQ==</jahia-module-signature>
     </properties>
   <repositories>
     <repository>
